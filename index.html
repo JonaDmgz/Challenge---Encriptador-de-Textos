@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <title>Encriptador de Texto</title>
+    </head>
+    <body>
+        <header class="encabezado_logo">
+            <img src="imagenes/Logo.png" class="imagenLogo" alt="Logo"> 
+        </header>
+        <main>
+            <section class="seccion_uno">
+                <div class="contenedor_texto_caja">
+                    <p id="texto">Ingrese el texto aquí</p>
+                    <textarea id="texto_ingresado" cols="25" rows="5" oninput="validarMinusculas(this);"></textarea>
+                </div>
+                <div class="contenedor_informacion">
+                    <img src="imagenes/Informacion.png" class="imagenInformacion" alt="Informacion">
+                    <p id="mensaje_informacion">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="contenedor_botones">
+                    <button onclick="botonEncriptar();" class="diseñoBotones" id="btn_Encriptar">Encriptar</button>
+                    <button onclick="botonDesencriptar();" class="diseñoBotones" id="btn_Desencriptar">Desencriptar</button>
+                </div>
+            </section>
+            <section class="seccion_dos">
+                <div class="contenedor_respuesta">
+                    <textarea id="respuesta"></textarea>
+                </div>
+                <div class="contenedor_muñeco" id="conMuñeco">
+                    <img src="imagenes/Muñeco.png" class="imagenMuñeco" alt="Muñeco">
+                </div>
+                <div class="contenedor_mensajes" id="conMensajes">
+                    <h3 id="texto_no_encontrado">Ningún mensaje fue <br>encontrado</h3>
+                    <p id="mensaje_ingrese_texto">Ingrese el texto que desees encriptar o <br>desencriptar</p>
+                </div>
+                <div class="contenedor_boton_copiar">
+                    <button id="botonCopy" class="diseñoBotones" onclick="botonCopiar();">Copiar</button>
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
+
